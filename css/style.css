@@ -93,6 +93,14 @@ li {
     padding: 0 0 20px 0;
     list-style: none;
    }
+   .footer05 .wrap .none-box {
+    width: 22%;
+   }
+   .footer05 .wrap .none-box ul {
+    margin: 0;
+    padding: 0 0 20px 0;
+    list-style: none;
+   }
 
 /* トップページに適用される */
 .OTHERS{
@@ -527,6 +535,7 @@ table {
 .float-left {
     margin:0 50px 0 0;
 }
+
 /* 色を変える→JKボンバーズ、代表曲なし */
 .color_change {
     color: rgb(143, 140, 132);
@@ -727,4 +736,113 @@ table {
    .SNS>br,.BREAK-ARTISTS>br {
     display: none;
   }
-   }
+  .profile_img img {
+    width: 50%;
+  }
+  h1 {
+    margin-top: 15px;
+    font-size:large;
+  }
+  .dli-caret-circle-fill-right {
+    width: 2em;
+    height: 2em;
+  }
+  .dli-caret-circle-fill-left {
+    width: 2em;
+    height: 2em;
+  }
+  tr {
+    font-size: medium;
+  }
+  td {
+    font-size: small;
+    overflow-wrap: break-word;
+  }
+  .movie_text1 {
+    overflow-wrap: break-word;
+  }
+  .shorts {
+    width: 80%;
+    height: 100%;
+  }
+  .images-content{
+    margin: 0 auto;
+    }
+    .spinner img {
+        display: none;
+    }
+    .btn-box {
+        display:flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+    }
+    #clear {
+        margin-right: 50px;
+    }
+    .mute_btn {
+        width: 200px;
+    }
+    .youtube_movie {
+        width: 90%;
+    }
+    .hero {
+        object-fit: cover;
+        background-image: url(../img/main.jpg);
+        width: 100%;
+        height: 100%;
+    }
+    .logo1 {
+        display: inline-block;
+        margin-left: 0px;
+        margin-top: 350px;
+    }
+    .logo1 img {
+        width: 50%;
+    }
+    .OFFICIAL_SNS {
+        margin-top: 50px;
+    }
+    .content-pic1,.content-pic2,.content-pic3,.content-pic4 {
+        margin-right: 10px;
+    }
+    .content-pic img {
+        width: 200px;
+        height: 200px;
+        display: flex;
+    }
+    .TWITTER {
+        display: none;
+    }
+    .OFFICIAL_SNS {
+        bottom: -57px;
+    }
+    .OTHERS,.BREAK_ARTISTS,.SNS_YOUTUBE {
+        margin-left: 0px;
+    }
+    .ABOUT_THIS {
+        display: none;
+    }
+    .TV {
+        margin-top: -60px;
+    }
+    .TV_other {
+        font-size: small;
+        width: 100%;
+    }
+    .content2 {
+        width: 100%;
+    }
+    .BREAK-ARTISTS {
+        display: none;
+    }
+    .none-box ul {
+        display: none;
+    }
+    #judge_text_clear{
+        width: 80%;
+    }
+    #judge_text_faiure{
+        width: 80%;
+        font-size: 18px;
+    }
+}
