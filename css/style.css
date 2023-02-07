@@ -845,4 +845,9 @@ table {
         width: 80%;
         font-size: 18px;
     }
+    .recommend_MOVIE00 {
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+    }   
 }
