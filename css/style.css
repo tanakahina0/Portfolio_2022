@@ -4,8 +4,9 @@ body {
     background-color: #eee;
     color: #222;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6 {
     margin: 0;
 }
 
@@ -33,27 +34,35 @@ li {
 	list-style-type: none;
 }
 #loading {
-    width: 100vw;
+    /* width: 100vw;
     height: 100vh;
     transition: all 1s;
     background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 500;
+    z-index: 999; */
+    transition: all 1s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#fff;
+    text-align:center;
   }
-
 .loaded {
     opacity: 0;
     visibility: hidden;
 }
-
-.spinner img {
-    display: inline-block;
-    margin-left: 330px;
-    margin-top: 150px;
+#spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
+#spinner img {
+    width: 50vw;
+}
 /* フッター */
 
 .footer05 {
@@ -101,6 +110,7 @@ li {
     padding: 0 0 20px 0;
     list-style: none;
    }
+   
 
 /* トップページに適用される */
 .OTHERS{
@@ -132,13 +142,19 @@ li {
     margin-top: 30px;
     margin-left: 50px;
     display: inline-block;
-}
-.movie{
-    display: inline-block;
     vertical-align: top;
 }
+.movie_text{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px
+}
+
 .movie_text1{
     font-size: 15px;
+    word-break: break-all;
 }
 .movie_text2{
     font-size: 14.8px;
@@ -160,6 +176,14 @@ li {
 .fa-brands{
     margin-right: 20px;
 }
+/* めも */
+/* :root {
+    --v--space: clamp(90px,2vw,120px);
+}
+.posts {
+    padding: var(--v--space) 0;
+} */
+
 /* 番組説明文 */
 .TV_other {
     width: 540px;
@@ -338,7 +362,6 @@ li {
 }
 
 img {
-    display: block;
     border-style: none;
 }
 
@@ -350,30 +373,32 @@ img {
 .content-text {
     font-weight: bold;
     margin-top: 12px;
-    width: 100%;
+    width: 250px;
     background-color: rgb(249, 252, 252);
 }
 .content1{
     margin-top: 100px;
     align-items: center;
 }
-.content2{
+/* .content2{
     margin-top: 40px;
     align-items: center;
-}
+} */
 .content-pic {
-	display: flex;
+	display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:10px 70px;
 	list-style: none;
 	padding: 0 60px 0 60px;
-	justify-content: space-evenly;
 }
-.content-pic1,.content-pic2,.content-pic3,.content-pic4{
+.content-pic2{
 	cursor: pointer;
-	margin: 10px 0 0 0;
+	margin: 30px 0 0 0;
 }
 .content-pic img {
 	transition: 1s all;
     border-radius: 6px;
+    margin: 0;
 }
 .content-pic img:hover{
 	transform: scale(1.1,1.1);
@@ -714,11 +739,20 @@ table {
     background:#333;/*ドットボタンの現在地表示の色*/
 }
    @media only screen and (max-width: 599px) {
-   .footer05 .wrap {
-    width: 100%;
-    padding: 0 20px;
+    .footer05 .wrap {
+    width: 90%;
     box-sizing: border-box;
+    color: #fcfcfc;
+    background: #151e36;
    }
+
+   /* .footer05 {
+    margin-top: 80px;
+    color: #fcfcfc;
+    background: #151e36;
+    padding: 30px;
+   } */
+
    .footer05 .wrap h3 {
     border: none;
    }
@@ -733,6 +767,9 @@ table {
     padding: 5px 15px;
     border-bottom: 1px #c4c4c4 solid;
    }
+   .footer05 .wrap {
+    font-size: small;
+   }
    .SNS>br,.BREAK-ARTISTS>br {
     display: none;
   }
@@ -742,6 +779,9 @@ table {
   h1 {
     margin-top: 15px;
     font-size:large;
+  }
+  h2 {
+    margin-right: 0;
   }
   .dli-caret-circle-fill-right {
     width: 2em;
@@ -758,18 +798,15 @@ table {
     font-size: small;
     overflow-wrap: break-word;
   }
-  .movie_text1 {
-    overflow-wrap: break-word;
-  }
+  .movie_text {
+    font-size: 1vh;
+    }
   .shorts {
     width: 80%;
     height: 100%;
   }
   .images-content{
     margin: 0 auto;
-    }
-    .spinner img {
-        display: none;
     }
     .btn-box {
         display:flex;
@@ -799,26 +836,18 @@ table {
     .logo1 img {
         width: 50%;
     }
-    .OFFICIAL_SNS {
-        margin-top: 50px;
-    }
-    .content-pic1,.content-pic2,.content-pic3,.content-pic4 {
-        margin-right: 10px;
-    }
-    .content-pic img {
-        width: 200px;
-        height: 200px;
-        display: flex;
-    }
-    .TWITTER {
+    .OFFICIAL_SNS,.TWITTER {
         display: none;
     }
-    .OFFICIAL_SNS {
-        bottom: -57px;
+    /* .content-pic2 {
+        margin-right: 10px;
+    } */
+    i[class^="fa"] {
+        display: none;
     }
-    .OTHERS,.BREAK_ARTISTS,.SNS_YOUTUBE {
-        margin-left: 0px;
-    }
+    /* .OTHERS,.BREAK_ARTISTS,.SNS_YOUTUBE {
+        margin: 0 auto;
+    } */
     .ABOUT_THIS {
         display: none;
     }
@@ -826,12 +855,37 @@ table {
         margin-top: -60px;
     }
     .TV_other {
-        font-size: small;
-        width: 100%;
+        width: 80vw;
+        color: rgb(89, 89, 89);
+        font-size: 1vh;
+        word-break: break-all;
+        margin-left: 10px;
     }
-    .content2 {
-        width: 100%;
+    .OTHERS{
+        margin-left: 20px;
+        color: rgb(89, 89, 89);
+        display: flex;
     }
+    .BREAK_ARTISTS {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .SNS_YOUTUBE {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .BREAK_ARTISTS-overview{
+        color: rgb(89, 89, 89);
+        font-size: 1vh;
+        word-break: break-all;
+        margin-left: 10px;
+    }
+    .recommend_MOVIE00 {
+	    padding: 0 60px 0 60px;
+    }
+    /* .content2 {
+        width: 100%;
+    } */
     .BREAK-ARTISTS {
         display: none;
     }
@@ -845,9 +899,21 @@ table {
         width: 80%;
         font-size: 18px;
     }
-    .recommend_MOVIE00 {
-        width: 80%;
-        height: 80%;
-        margin: 0 auto;
-    }   
+    .main_content {
+        margin: 0 auto; 
+    }
+    /* .content-pic {
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: repeat(auto-fit,minmax(10px,2fr));
+        gap:5px 10px;
+        list-style: none; 
+    } */
+    .content-pic2{
+        cursor: pointer;
+    }
+    .content-pic img {
+        border-radius: 6px;
+    }
 }
