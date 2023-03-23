@@ -375,6 +375,7 @@ img {
     margin-top: 12px;
     width: 250px;
     background-color: rgb(249, 252, 252);
+    text-align: center;
 }
 .content1{
     margin-top: 100px;
@@ -386,7 +387,7 @@ img {
 } */
 .content-pic {
 	display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,2fr));
     gap:10px 70px;
 	list-style: none;
 	padding: 0 60px 0 60px;
@@ -403,9 +404,6 @@ img {
 .content-pic img:hover{
 	transform: scale(1.1,1.1);
 	transition: 1s all;
-}
-.content-text{
-	text-align: center;	
 }
 
 /* ヒーロー */
@@ -879,6 +877,7 @@ table {
         font-size: 1.5vh;
         word-break: break-all;
         margin-left: 10px;
+        width: 80vw
     }
     .recommend_MOVIE00 {
 	    padding: 0 15px 0 60px;
@@ -902,23 +901,27 @@ table {
     .main_content {
         margin: 0 auto; 
     }
-    /* .content-pic {
+    .content-pic {
         display: grid;
+        grid-template-columns: repeat(2,1fr);
         padding: 1rem;
-        grid-template-columns: 1fr 1fr;
-        /* grid-template-columns: repeat(auto-fit,minmax(10px,2fr));
-        gap:5px 10px;
+        gap: 13px 7px;
         list-style: none; 
-    } */
+    }
     .content-pic2{
         cursor: pointer;
+        margin: 15px 0 0 0;
     }
-    .content-pic img {
-        border-radius: 6px;
+    .content-pic2 img {
+        width: 170px;
+        height: 170px;
     }
     .content-text {
         font-weight: bold;
         margin-top: 12px;
         background-color: rgb(249, 252, 252);
+        width:150px;
+        margin: 0 auto;
+        font-size: 3vmin;
     }
 }
