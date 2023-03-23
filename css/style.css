@@ -857,7 +857,7 @@ table {
     .TV_other {
         width: 80vw;
         color: rgb(89, 89, 89);
-        font-size: 1vh;
+        font-size: 2vh;
         word-break: break-all;
         margin-left: 10px;
     }
@@ -876,12 +876,12 @@ table {
     }
     .BREAK_ARTISTS-overview{
         color: rgb(89, 89, 89);
-        font-size: 1vh;
+        font-size: 2vh;
         word-break: break-all;
         margin-left: 10px;
     }
     .recommend_MOVIE00 {
-	    padding: 0 60px 0 60px;
+	    padding: 0 10px 0 60px;
     }
     /* .content2 {
         width: 100%;
