@@ -161,7 +161,6 @@ li {
 }
 .OFFICIAL_SNS {
     position: absolute;
-    bottom: 0;
 }
 .SNS_TWITTER {
     margin: 0 0 10px 200px;
@@ -736,11 +735,16 @@ table {
 .slick-dots .slick-active button{
     background:#333;/*ドットボタンの現在地表示の色*/
 }
+
+
    @media only screen and (max-width: 599px) {
     .footer05 .wrap {
     width: 90%;
     box-sizing: border-box;
     color: #fcfcfc;
+   }
+
+   .footer05  {
     background: #151e36;
    }
 
@@ -803,6 +807,9 @@ table {
     width: 80%;
     height: 100%;
   }
+  .OFFICIAL_SNS {
+    position:relative;
+}
   .images-content{
     margin: 0 auto;
     }
@@ -834,15 +841,16 @@ table {
     .logo1 img {
         width: 50%;
     }
-    .OFFICIAL_SNS,.TWITTER {
+   .TWITTER {
         display: none;
     }
+    
     /* .content-pic2 {
         margin-right: 10px;
     } */
-    i[class^="fa"] {
+    /* i[class^="fa"] {
         display: none;
-    }
+    } */
     /* .OTHERS,.BREAK_ARTISTS,.SNS_YOUTUBE {
         margin: 0 auto;
     } */
