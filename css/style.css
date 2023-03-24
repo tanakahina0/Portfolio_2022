@@ -79,7 +79,7 @@ li {
     text-decoration: underline;
    }
    .footer05 .wrap {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -372,9 +372,9 @@ img {
 .content-text {
     font-weight: bold;
     margin-top: 12px;
-    width: 250px;
+    max-width: 250px;
     background-color: rgb(249, 252, 252);
-    text-align: center;
+    margin: 0 auto;
 }
 .content1{
     margin-top: 100px;
@@ -738,8 +738,18 @@ table {
 
 
    @media only screen and (max-width: 599px) {
+    .content-pic img:hover{
+        transition: 1s all;
+        border-radius: 6px;
+        margin: 0;
+    }
     .footer05 .wrap {
     width: 90%;
+    box-sizing: border-box;
+    color: #fcfcfc;
+   }
+   .wrap {
+    max-width: 100%;
     box-sizing: border-box;
     color: #fcfcfc;
    }
