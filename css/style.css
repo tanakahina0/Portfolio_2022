@@ -759,6 +759,8 @@ table {
     background:#333;/*ドットボタンの現在地表示の色*/
 }
 
+/* 非公開になった動画 */
+
 .Unrevealed {
     width: 30vw;
 }
@@ -842,7 +844,10 @@ table {
     }
   }
 
-   @media screen and (max-width: 599px) {
+
+
+@media screen and (max-width: 599px) {
+    /* 599px以下に適用される（スマホ用） */
     #page-top img {
         width: 20vw;
         opacity: 0.5;
@@ -860,102 +865,95 @@ table {
         margin: 0;
     }
     .footer05 .wrap {
-    width: 90%;
-    box-sizing: border-box;
-    color: #fcfcfc;
-   }
-   .wrap {
-    max-width: 100%;
-    box-sizing: border-box;
-    color: #fcfcfc;
-   }
-   .footer05  {
-    margin-top: 80px;
-    color: #fcfcfc;
-    background: #151e36;
-    padding: 30px;
-   }
-   .hero {
-    width: 100vw;
-}
-.content-pic {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 1rem;
-    gap: 13px 0px;
-    list-style: none;
-}
-.content-pic2 img {
-    width: 40vw !important;
-    height: 40vw !important;
-}
-.content-text {
-    width: 100px !important;
-}
-   /* .footer05 {
-    margin-top: 80px;
-    color: #fcfcfc;
-    background: #151e36;
-    padding: 30px;
-   } */
-
-   .footer05 .wrap h3 {
-    border: none;
-   }
-   .footer05 .wrap .box {
-    width: 100%;
-   }
-   .footer05 .wrap .box ul {
-    border-top: 1px #c4c4c4 solid;
-   }
-   .footer05 .wrap .box ul li a {
-    display: block;
-    padding: 5px 15px;
-    border-bottom: 1px #c4c4c4 solid;
-   }
-   .footer05 .wrap {
-    font-size: small;
-   }
-   .SNS>br,.BREAK-ARTISTS>br {
-    display: none;
-  }
-  .profile_img img {
-    width: 50%;
-  }
-  h1 {
-    margin-top: 15px;
-    font-size:large;
-  }
-  h2 {
-    margin-right: 0;
-  }
-  .dli-caret-circle-fill-right {
-    width: 2em;
-    height: 2em;
-  }
-  .dli-caret-circle-fill-left {
-    width: 2em;
-    height: 2em;
-  }
-  tr {
-    font-size: medium;
-  }
-  td {
-    font-size: small;
-    overflow-wrap: break-word;
-  }
-  .movie_text {
-    font-size: 2vh;
+        width: 90%;
+        box-sizing: border-box;
+        color: #fcfcfc;
     }
-  .shorts {
-    width: 80%;
-    height: 100%;
-  }
-  .OFFICIAL_SNS {
-    position:relative;
-}
-  .images-content{
-    margin: 0 auto;
+    .wrap {
+        max-width: 100%;
+        box-sizing: border-box;
+        color: #fcfcfc;
+    }
+    .footer05  {
+        margin-top: 80px;
+        color: #fcfcfc;
+        background: #151e36;
+        padding: 30px;
+    }
+    .hero {
+        width: 100vw;
+    }
+    .content-pic {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 1rem;
+        gap: 13px 0px;
+        list-style: none;
+    }
+    .content-pic2 img {
+        width: 40vw !important;
+        height: 40vw !important;
+    }
+    .content-text {
+        width: 100px !important;
+    }
+    .footer05 .wrap h3 {
+        border: none;
+    }
+    .footer05 .wrap .box {
+        width: 100%;
+    }
+    .footer05 .wrap .box ul {
+        border-top: 1px #c4c4c4 solid;
+    }
+    .footer05 .wrap .box ul li a {
+        display: block;
+        padding: 5px 15px;
+        border-bottom: 1px #c4c4c4 solid;
+    }
+    .footer05 .wrap {
+        font-size: small;
+    }
+    .SNS>br,.BREAK-ARTISTS>br {
+        display: none;
+    }
+    .profile_img img {
+        width: 50%;
+    }
+    h1 {
+        margin-top: 15px;
+        font-size:large;
+    }
+    h2 {
+        margin-right: 0;
+    }
+    .dli-caret-circle-fill-right {
+        width: 2em;
+        height: 2em;
+    }
+    .dli-caret-circle-fill-left {
+        width: 2em;
+        height: 2em;
+    }
+    tr {
+        font-size: medium;
+    }
+    td {
+        font-size: small;
+        overflow-wrap: break-word;
+    }
+    .movie_text {
+        font-size: 2vh;
+    }
+    .shorts {
+        width: 80%;
+        height: 100%;
+    }
+    .OFFICIAL_SNS {
+        position:relative;
+    }
+    .images-content{
+        margin: 0 auto;
     }
     #clear {
         margin-right: 50px;
@@ -983,16 +981,6 @@ table {
    .TWITTER {
         display: none;
     }
-    
-    /* .content-pic2 {
-        margin-right: 10px;
-    } */
-    /* i[class^="fa"] {
-        display: none;
-    } */
-    /* .OTHERS,.BREAK_ARTISTS,.SNS_YOUTUBE {
-        margin: 0 auto;
-    } */
     .ABOUT_THIS {
         display: none;
     }
@@ -1029,28 +1017,19 @@ table {
     .recommend_MOVIE00 {
 	    padding: 0 15px 0 60px;
     }
-    /* .content2 {
-        width: 100%;
-    } */
     .BREAK-ARTISTS {
         display: none;
     }
     .none-box ul {
         display: none;
     }
-    #judge_text_clear{
+    #judge_text_clear {
         width: 80%;
     }
-    #judge_text_faiure{
+    #judge_text_faiure {
         width: 80%;
         font-size: 18px;
     }
-    /* .judge {
-        margin-bottom: 35px !important;
-    }
-    .attention {
-        margin-bottom: 20px !important;
-    } */
     .main_content {
         margin: 0 auto; 
     }
@@ -1061,7 +1040,7 @@ table {
         gap: 13px 7px;
         list-style: none; 
     }
-    .content-pic2{
+    .content-pic2 {
         cursor: pointer;
         margin: 15px 0 0 0;
     }
@@ -1138,9 +1117,6 @@ table {
         max-width: 90%;
         height: 200px;
     }
-    /* td {
-        white-space: nowrap;
-    }  */
     .btn-box {
         display:flex;
         justify-content: space-evenly;
@@ -1199,7 +1175,7 @@ table {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
-	/* 1280px以下に適用されるCSS（タブレット用） */
+	/* 1025px以上、1280px以下に適用されるCSS（タブレット用） */
     .TWITTER {
         margin-right: 80px;   
     }
@@ -1262,137 +1238,135 @@ table {
     }
     /* ●ボタンを押したとき表示させる */
 
-#judge_text_clear{
-    display: none;
-    width: 500px;
-    padding: 10px;
-    margin: 0 auto;
-    color: #eee;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    background-color: #e03759;
-    border-radius: 40px;
-}
-#judge_text_clear.on{
-    display: block;
-}
+    #judge_text_clear{
+        display: none;
+        width: 500px;
+        padding: 10px;
+        margin: 0 auto;
+        color: #eee;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        background-color: #e03759;
+        border-radius: 40px;
+    }
+    #judge_text_clear.on{
+        display: block;
+    }
 
-#judge_text_clear p{
-    padding: 1px;
-}
+    #judge_text_clear p{
+        padding: 1px;
+    }
 
 /* ✕ボタンを押したとき表示させる */
-#judge_text_faiure{
-    display: none;
-    width: 500px;
-    padding: 10px;
-    margin: 0 auto;
-    color: #eee;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    background-color: #0d75ba;
-    border-radius: 40px;
-}
-#judge_text_faiure.on{
-    display: block;
-}
+    #judge_text_faiure{
+        display: none;
+        width: 500px;
+        padding: 10px;
+        margin: 0 auto;
+        color: #eee;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        background-color: #0d75ba;
+        border-radius: 40px;
+    }
+    #judge_text_faiure.on{
+        display: block;
+    }
 
-#judge_text_faiure p{
-    padding: 1px;
-}
-.footer05 {
-    margin-top: 80px;
-    color: #fcfcfc;
-    background: #151e36;
-    padding: 30px;
-   }
-   .footer05 a {
-    color: #fcfcfc;
-    text-decoration: none;
-   }
-   .footer05 li a:hover {
-    text-decoration: underline;
-   }
-   .footer05 .wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   }
-   .footer05 .wrap h3 {
-    margin: 0 0 10px 0;
-    padding: 0;
-    border-bottom: 1px #c4c4c4 solid;
-   }
-   .footer05 .wrap p {
-    margin: 0;
-    padding: 0 0 20px 0;
-   }
-   .footer05 .wrap .box {
-    width: 22%;
-   }
-   .footer05 .wrap .box ul {
-    margin: 0;
-    padding: 0 0 20px 0;
-    list-style: none;
-   }
-   .footer05 .wrap .none-box {
-    width: 22%;
-   }
-   .footer05 .wrap .none-box ul {
-    margin: 0;
-    padding: 0 0 20px 0;
-    list-style: none;
-   }
-
+    #judge_text_faiure p{
+        padding: 1px;
+    }
+    .footer05 {
+        margin-top: 80px;
+        color: #fcfcfc;
+        background: #151e36;
+        padding: 30px;
+    }
+    .footer05 a {
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+    .footer05 li a:hover {
+        text-decoration: underline;
+    }
+    .footer05 .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer05 .wrap h3 {
+        margin: 0 0 10px 0;
+        padding: 0;
+        border-bottom: 1px #c4c4c4 solid;
+    }
+    .footer05 .wrap p {
+        margin: 0;
+        padding: 0 0 20px 0;
+    }
+    .footer05 .wrap .box {
+        width: 22%;
+    }
+    .footer05 .wrap .box ul {
+        margin: 0;
+        padding: 0 0 20px 0;
+        list-style: none;
+    }
+    .footer05 .wrap .none-box {
+        width: 22%;
+    }
+    .footer05 .wrap .none-box ul {
+        margin: 0;
+        padding: 0 0 20px 0;
+        list-style: none;
+    }
 }
 
 @media screen and (min-width: 820px) and (max-width: 1180px) {
-
-.hero {
-    width: 100vw;
-    background-image: url(../img/main.jpg);
-    background-position: center;
-    background-size: cover;
-}
-.logo {
-    display: inline-block;
-    margin-left: -450px;
-    width: 50vw;
-}
-.footer05 {
-    margin-top: 80px;
-    color: #fcfcfc;
-    background: #151e36;
-    padding: 30px;
-   }
-   .twitter-timeline {
-    margin: 0px auto;
-    /* display: inline-block; */
-    align-items: center;
-    width: 85vw !important;  
-}
-.SNS_TWITTER{
-    margin: 18px auto;
-}
-.OFFICIAL_SNS {
-    margin-bottom: 1000px;
-}
-.OTHERS{
-    margin-left: 70px;
-    color: rgb(89, 89, 89);
-    display: inline-block;
-}
-.TWITTER {
-    margin-top: 120px;
-}
-
+    /* 820px以上、1180px以下に適用される */
+    .hero {
+        width: 100vw;
+        background-image: url(../img/main.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .logo {
+        display: inline-block;
+        margin-left: -450px;
+        width: 50vw;
+    }
+    .footer05 {
+        margin-top: 80px;
+        color: #fcfcfc;
+        background: #151e36;
+        padding: 30px;
+    }
+    .twitter-timeline {
+        margin: 0px auto;
+        align-items: center;
+        width: 85vw !important;  
+    }
+    .SNS_TWITTER{
+        margin: 18px auto;
+    }
+    .OFFICIAL_SNS {
+        margin-bottom: 1000px;
+    }
+    .OTHERS{
+        margin-left: 70px;
+        color: rgb(89, 89, 89);
+        display: inline-block;  
+    }
+    .TWITTER {
+        margin-top: 120px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* 768px以上、1024px以下に適用されるCSS */
 	.btn-box {
         width: 40%;
         /* height: 100px;*/
@@ -1402,13 +1376,14 @@ table {
         display: flex;
         justify-content:space-between;
         user-select: none;
-      }
-      .mute_text>p {
+    }
+    .mute_text>p {
         font-size: medium;
-      }
+    }
 }
 
 @media screen and (min-width: 280px) and (max-width: 653px) {
+    /* 280px以上、653px以下に適用されるCSS */
     .TV,.BREAK_ARTISTS>h2,.SNS_YOUTUBE>h2 {
         width: 80vw;
     }
@@ -1434,65 +1409,67 @@ table {
 }
 
 @media screen and (min-width: 320px) and (max-width: 722px) {
+    /* 320px以上、722px以下に適用されるCSS */
     .hero {
         width: 100vw;
     }
 }
 
 @media screen and (min-width: 540px) and (max-width: 720px) {
+    /* 540px以上、720px以下に適用されるCSS */
     /* ●ボタンを押したとき表示させる */
+    #judge_text_clear{
+        display: none;
+        width: 80%;
+        padding: 10px;
+        margin: 0 auto;
+        color: #eee;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        background-color: #e03759;
+        border-radius: 40px;
+    }
+    #judge_text_clear.on{
+        display: block;
+    }
 
-#judge_text_clear{
-    display: none;
-    width: 80%;
-    padding: 10px;
-    margin: 0 auto;
-    color: #eee;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    background-color: #e03759;
-    border-radius: 40px;
-}
-#judge_text_clear.on{
-    display: block;
-}
+    #judge_text_clear p{
+        padding: 1px;
+    }
 
-#judge_text_clear p{
-    padding: 1px;
-}
+    /* ✕ボタンを押したとき表示させる */
+    #judge_text_faiure{
+        display: none;
+        width: 80%;
+        padding: 10px;
+        margin: 0 auto;
+        color: #eee;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        background-color: #0d75ba;
+        border-radius: 40px;
+    }
+    #judge_text_faiure.on{
+        display: block;
+    }
 
-/* ✕ボタンを押したとき表示させる */
-#judge_text_faiure{
-    display: none;
-    width: 80%;
-    padding: 10px;
-    margin: 0 auto;
-    color: #eee;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    background-color: #0d75ba;
-    border-radius: 40px;
-}
-#judge_text_faiure.on{
-    display: block;
-}
-
-#judge_text_faiure p{
-    padding: 1px;
-}
-.hero {
-    width: 100vw;
-}
-.footer05 {
-    margin-top: 80px;
-    color: #fcfcfc;
-    background: #151e36;
-    padding: 30px;
-   }
+    #judge_text_faiure p{
+        padding: 1px;
+    }
+    .hero {
+        width: 100vw;
+    }
+    .footer05 {
+        margin-top: 80px;
+        color: #fcfcfc;
+        background: #151e36;
+        padding: 30px;
+    }
 }
 @media screen and (min-width: 53px) and (max-width: 279px) {
+    /* 53px以上、279以下に適用される */
     .hero{
         width: 100vw;
     }
