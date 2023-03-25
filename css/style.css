@@ -666,6 +666,9 @@ table {
 	align-items: center;
     padding: 8px;
 }
+.mute_text>p {
+    font-size: 10vw;
+}
 .mute_btn_ctn{
     display: flex;
 	justify-content: center;
