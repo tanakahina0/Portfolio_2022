@@ -756,6 +756,9 @@ table {
     background:#333;/*ドットボタンの現在地表示の色*/
 }
 
+.Unrevealed {
+    width: 30vw;
+}
 
    @media screen and (max-width: 599px) {
     .recommend_MOVIE iframe {
