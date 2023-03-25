@@ -667,7 +667,7 @@ table {
     padding: 8px;
 }
 .mute_text>p {
-    font-size: 10vw !important;
+    min-width: 10vw !important;
 }
 .mute_btn_ctn{
     display: flex;
