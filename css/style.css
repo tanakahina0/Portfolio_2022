@@ -415,9 +415,9 @@ img {
     background-size: cover;
 }
 .logo1 {
-    display: inline-block;
-    margin-left: 450px;
-    margin-top: 350px;
+    display: inline-block ;
+    margin-left: 450px ;
+    margin-top: 350px ;
 }
 
 /* ○×判定ボタン */
@@ -763,7 +763,90 @@ table {
     width: 30vw;
 }
 
+
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクの形状*/
+#page-top a{
+	display: flex;
+	transition:all 0.3s;
+}
+
+#page-top a:hover{
+    opacity: 0.5;
+}
+
+#page-top img {
+    width: 10vw;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+
+#footer{
+	position: relative;
+	z-index: 2;
+}
+
+
+  @keyframes DownAnime{
+    from {
+      opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  }
+
    @media screen and (max-width: 599px) {
+    #page-top img {
+        width: 20vw;
+        opacity: 0.5;
+    }
     .Unrevealed {
         width: 30vw;
     }
@@ -1110,13 +1193,6 @@ table {
     .mute_text>p {
         font-size: 10px;
     }
-    /* .mute_text {
-        background-color: rgb(171, 163, 152);
-        min-width: 180%;
-        max-height: 150%;
-        cursor: pointer;
-        border-radius: 6px;
-    } */
     .logo {
         margin-left: -450px;
     }
