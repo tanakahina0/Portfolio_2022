@@ -168,6 +168,7 @@ li {
     font-weight: bold;
     border-bottom: solid 2px rgb(43, 139, 184);
 }
+
 .SNS_YOUTUBE{
     margin-top: 100px;
     margin-left: 70px;
@@ -408,6 +409,7 @@ img {
 /* ヒーロー */
 .hero {
     height: 650px;
+    width: 100vw;
     background-image: url(../img/main.jpg);
     background-position: center;
     background-size: cover;
@@ -426,7 +428,7 @@ img {
     margin-bottom: 30px;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
   }
 .all_btn{
     margin-top: 5px;
@@ -520,6 +522,7 @@ img {
   /* ✕ボタンのテキスト */
   .btn-faiure>p{
     font-size: 150px;
+    margin-top: 50px;
     color: #0d4996;
   }
   /* ✕ボタンの影 */
@@ -577,7 +580,7 @@ table {
     padding: 10px;
     margin: 0 auto;
     color: #eee;
-    font-weight: 800;
+    font-weight: bold;
     font-size: 20px;
     text-align: center;
     background-color: #e03759;
@@ -586,6 +589,11 @@ table {
 #judge_text_clear.on{
     display: block;
 }
+
+#judge_text_clear p{
+    padding: 1px;
+}
+
 /* ✕ボタンを押したとき表示させる */
 #judge_text_faiure{
     display: none;
@@ -593,7 +601,7 @@ table {
     padding: 10px;
     margin: 0 auto;
     color: #eee;
-    font-weight: 800;
+    font-weight: bold;
     font-size: 20px;
     text-align: center;
     background-color: #0d75ba;
@@ -602,6 +610,11 @@ table {
 #judge_text_faiure.on{
     display: block;
 }
+
+#judge_text_faiure p{
+    padding: 1px;
+}
+
 /* 判定お願いします */
 .judge {
 	display: flex;
@@ -609,8 +622,7 @@ table {
 	align-items: center;
 	font-size: 20px;
 	text-align: center;
-    margin-bottom: 5px;
-    margin-top: 20px;
+    margin-bottom: -30px !important;
 }
 
 .judge::before,
@@ -633,18 +645,26 @@ table {
 /* ミュート切り替えボタン */
 
 .mute_btn {
-    background-color: rgb(171, 163, 152);
-    color: #fff;
     cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    font-size: 13px;
-    height: 40px;
-    width: 8%;
-    border-radius: 6px;
     margin-bottom: 20px;
     user-select: none;
+    font-size: 15%;
+}
+.mute_text {
+    background-color: rgb(171, 163, 152);
+    color: #fff;
+    cursor: pointer;
+    min-width: 80%;
+    max-height: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 8px;
 }
 .mute_btn_ctn{
     display: flex;
@@ -737,7 +757,11 @@ table {
 }
 
 
-   @media only screen and (max-width: 599px) {
+   @media screen and (max-width: 599px) {
+    .recommend_MOVIE iframe {
+        width: 80vw;
+        height: 80vw;
+    }
     .content-pic img:hover{
         transition: 1s all;
         border-radius: 6px;
@@ -753,11 +777,29 @@ table {
     box-sizing: border-box;
     color: #fcfcfc;
    }
-
    .footer05  {
+    margin-top: 80px;
+    color: #fcfcfc;
     background: #151e36;
+    padding: 30px;
    }
-
+   .hero {
+    width: 100vw;
+}
+.content-pic {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1rem;
+    gap: 13px 0px;
+    list-style: none;
+}
+.content-pic2 img {
+    width: 40vw !important;
+    height: 40vw !important;
+}
+.content-text {
+    width: 100px !important;
+}
    /* .footer05 {
     margin-top: 80px;
     color: #fcfcfc;
@@ -823,11 +865,6 @@ table {
   .images-content{
     margin: 0 auto;
     }
-    .btn-box {
-        display:flex;
-        justify-content: space-evenly;
-        margin-top: 10px;
-    }
     #clear {
         margin-right: 50px;
     }
@@ -840,7 +877,7 @@ table {
     .hero {
         object-fit: cover;
         background-image: url(../img/main.jpg);
-        width: 100%;
+        width: 100vw;
         height: 100%;
     }
     .logo1 {
@@ -916,6 +953,12 @@ table {
         width: 80%;
         font-size: 18px;
     }
+    /* .judge {
+        margin-bottom: 35px !important;
+    }
+    .attention {
+        margin-bottom: 20px !important;
+    } */
     .main_content {
         margin: 0 auto; 
     }
@@ -930,10 +973,6 @@ table {
         cursor: pointer;
         margin: 15px 0 0 0;
     }
-    .content-pic2 img {
-        width: 170px;
-        height: 170px;
-    }
     .content-text {
         font-weight: bold;
         margin-top: 12px;
@@ -941,5 +980,442 @@ table {
         width:150px;
         margin: 0 auto;
         font-size: 3vmin;
+    }
+    .header-container img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        margin: 0 auto;
+    }
+    td {
+        padding: 10px;
+    }
+    .slider iframe {
+        width: 80%;
+        height: 100%;
+    }
+    .profile_YOUTUBE {
+        padding: 20px;
+    }
+    .profile_img img {
+        width: 70%;
+    }
+    .judge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: -5px;
+        margin-top: -10px;
+    }
+    .mute_btn_ctn {
+        width: 40%;
+        margin: -10px auto;
+    }
+    .mute_text {
+        font-size: 5px;
+    }
+    .attention {
+        margin: -30px auto -20px auto;
+    }
+    #judge_text_clear {
+        width: 100%;
+        font-size: 1em;
+    }
+    #judge_text_clear p {
+        padding: 0;
+        margin: 0 auto;
+    }
+    #judge_text_faiure {
+        width: 100%;
+        font-size: 1em;
+    }
+    #judge_text_faiure p {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .recommend_MOVIE_Inista {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .recommend_MOVIE_Inista iframe {
+        max-width: 90%;
+        height: 200px;
+    }
+    /* td {
+        white-space: nowrap;
+    }  */
+    .btn-box {
+        display:flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+        padding: 10px;
+
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 1024px) {
+	/* 600px以上、1024px以下に適用されるCSS（タブレット用） */
+    .twitter-timeline {
+        margin: 0px auto;
+        /* display: inline-block; */
+        align-items: center;
+        width: 85vw !important;  
+    }
+    .SNS_TWITTER{
+        margin: 18px auto;
+    }
+    .OFFICIAL_SNS {
+        margin-bottom: 1000px;
+    }
+    .OTHERS{
+        margin-left: 70px;
+        color: rgb(89, 89, 89);
+        display: inline-block;
+    }
+    .TWITTER {
+        margin-top: 120px;
+    }
+    .TV_other {
+        width: 85vw;
+        color: rgb(89, 89, 89);
+        font-size: 1vh;
+        word-break: break-all;
+        margin-left: 10px;
+    }
+    .content-pic {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,2fr));
+        gap: 0px 0px;
+        list-style: none;
+        padding: 0 60px 0 60px;
+    }
+    .judge>p, .attention>p, .mute_text>p {
+        text-align: center;
+        padding: 0px !important;
+    }
+    /* .mute_text {
+        background-color: rgb(171, 163, 152);
+        min-width: 180%;
+        max-height: 150%;
+        cursor: pointer;
+        border-radius: 6px;
+    } */
+    .logo {
+        margin-left: -450px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+	/* 1280px以下に適用されるCSS（タブレット用） */
+    .TWITTER {
+        margin-right: 80px;   
+    }
+    .mute_text {
+        font-size: 8px;
+    }
+    .profile_img img {
+        width: 30%;
+    }
+    .profile_img h1 {
+        font-size: medium;
+        text-align: center;
+        color: #2B2D44;
+        margin-top: 10px;
+    }
+    .judge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: -5px;
+        margin-top: -10px;
+    }
+    .mute_btn_ctn {
+        width: 100%;
+        margin: -10px auto;
+    }
+    .mute_text {
+        font-size: 5px;
+    }
+    .attention {
+        margin: -30px auto -20px auto;
+    }
+    #judge_text_clear {
+        width: 70%;
+        font-size: 1em;
+    }
+    #judge_text_clear p {
+        padding: 0;
+        margin: 0 auto;
+    }
+    #judge_text_faiure {
+        width: 70%;
+        font-size: 1em;
+    }
+    #judge_text_faiure p {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .recommend_MOVIE_Inista {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .recommend_MOVIE_Inista iframe {
+        max-width: 90%;
+        height: 60%;
+    }
+    /* ●ボタンを押したとき表示させる */
+
+#judge_text_clear{
+    display: none;
+    width: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    color: #eee;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: #e03759;
+    border-radius: 40px;
+}
+#judge_text_clear.on{
+    display: block;
+}
+
+#judge_text_clear p{
+    padding: 1px;
+}
+
+/* ✕ボタンを押したとき表示させる */
+#judge_text_faiure{
+    display: none;
+    width: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    color: #eee;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: #0d75ba;
+    border-radius: 40px;
+}
+#judge_text_faiure.on{
+    display: block;
+}
+
+#judge_text_faiure p{
+    padding: 1px;
+}
+.footer05 {
+    margin-top: 80px;
+    color: #fcfcfc;
+    background: #151e36;
+    padding: 30px;
+   }
+   .footer05 a {
+    color: #fcfcfc;
+    text-decoration: none;
+   }
+   .footer05 li a:hover {
+    text-decoration: underline;
+   }
+   .footer05 .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   }
+   .footer05 .wrap h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    border-bottom: 1px #c4c4c4 solid;
+   }
+   .footer05 .wrap p {
+    margin: 0;
+    padding: 0 0 20px 0;
+   }
+   .footer05 .wrap .box {
+    width: 22%;
+   }
+   .footer05 .wrap .box ul {
+    margin: 0;
+    padding: 0 0 20px 0;
+    list-style: none;
+   }
+   .footer05 .wrap .none-box {
+    width: 22%;
+   }
+   .footer05 .wrap .none-box ul {
+    margin: 0;
+    padding: 0 0 20px 0;
+    list-style: none;
+   }
+
+}
+
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+
+.hero {
+    width: 100vw;
+    background-image: url(../img/main.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.logo {
+    display: inline-block;
+    margin-left: -450px;
+    width: 50vw;
+}
+.footer05 {
+    margin-top: 80px;
+    color: #fcfcfc;
+    background: #151e36;
+    padding: 30px;
+   }
+   .twitter-timeline {
+    margin: 0px auto;
+    /* display: inline-block; */
+    align-items: center;
+    width: 85vw !important;  
+}
+.SNS_TWITTER{
+    margin: 18px auto;
+}
+.OFFICIAL_SNS {
+    margin-bottom: 1000px;
+}
+.OTHERS{
+    margin-left: 70px;
+    color: rgb(89, 89, 89);
+    display: inline-block;
+}
+.TWITTER {
+    margin-top: 120px;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.btn-box {
+        width: 40%;
+        /* height: 100px;*/
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        justify-content:space-between;
+        user-select: none;
+      }
+}
+
+@media screen and (min-width: 280px) and (max-width: 653px) {
+    .TV,.BREAK_ARTISTS>h2,.SNS_YOUTUBE>h2 {
+        width: 80vw;
+    }
+	#clear {
+        max-width: 80%;
+    }
+    #judge_text_clear>p, #judge_text_faiure>p {
+        font-size: 4px;
+    }
+    .judge {
+        font-size: small;
+    }
+    .btn-box {
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        justify-content:space-evenly;
+        user-select: none;
+      }
+    .movie>iframe {
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 722px) {
+    .hero {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 720px) {
+    /* ●ボタンを押したとき表示させる */
+
+#judge_text_clear{
+    display: none;
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+    color: #eee;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: #e03759;
+    border-radius: 40px;
+}
+#judge_text_clear.on{
+    display: block;
+}
+
+#judge_text_clear p{
+    padding: 1px;
+}
+
+/* ✕ボタンを押したとき表示させる */
+#judge_text_faiure{
+    display: none;
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+    color: #eee;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: #0d75ba;
+    border-radius: 40px;
+}
+#judge_text_faiure.on{
+    display: block;
+}
+
+#judge_text_faiure p{
+    padding: 1px;
+}
+.hero {
+    width: 100vw;
+}
+.footer05 {
+    margin-top: 80px;
+    color: #fcfcfc;
+    background: #151e36;
+    padding: 30px;
+   }
+}
+@media screen and (min-width: 53px) and (max-width: 279px) {
+    .hero{
+        width: 100vw;
+    }
+    .TV,.BREAK_ARTISTS>h2,.SNS_YOUTUBE>h2 {
+        width: 80vw;
+    }
+    .movie>iframe {
+        width: 80vw;
+    }
+    .content-pic {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 1rem;
+        gap: 13px 7px;
+        list-style: none;
     }
 }
