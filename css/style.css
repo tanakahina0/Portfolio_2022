@@ -850,7 +850,7 @@ table {
     /* 599px以下に適用される（スマホ用） */
     #page-top img {
         width: 20vw;
-        opacity: 0.5;
+        opacity: 0.9;
     }
     .Unrevealed {
         width: 30vw;
