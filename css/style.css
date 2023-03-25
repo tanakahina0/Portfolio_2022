@@ -761,6 +761,9 @@ table {
 }
 
    @media screen and (max-width: 599px) {
+    .Unrevealed {
+        width: 30vw;
+    }
     .recommend_MOVIE iframe {
         width: 80vw;
         height: 80vw;
@@ -1101,6 +1104,9 @@ table {
         text-align: center;
         padding: 0px !important;
     }
+    .mute_text>p {
+        font-size: 10px;
+    }
     /* .mute_text {
         background-color: rgb(171, 163, 152);
         min-width: 180%;
@@ -1317,6 +1323,9 @@ table {
         display: flex;
         justify-content:space-between;
         user-select: none;
+      }
+      .mute_text>p {
+        font-size: medium;
       }
 }
 
