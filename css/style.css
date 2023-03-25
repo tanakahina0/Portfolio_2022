@@ -657,7 +657,7 @@ table {
     background-color: rgb(171, 163, 152);
     color: #fff;
     cursor: pointer;
-    min-width: 80%;
+    min-width: 10vw;
     max-height: 100%;
     cursor: pointer;
     border-radius: 6px;
