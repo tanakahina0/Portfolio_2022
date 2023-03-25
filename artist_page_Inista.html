@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <div id="loading">
-		<div class="spinner"><img class="logo" src="img/logo2.png" width="800px"></div>
+  <div id="loading">
+		<div id="spinner"><img src="img/logo2.png" alt=""></div>
 	</div>
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css">
 
     <script src="https://kit.fontawesome.com/8a0af59d6d.js" crossorigin="anonymous"></script>
 </head>
@@ -55,7 +58,43 @@
           </tr>
         </tbody>
       </table>
+
       <div class="profile_YOUTUBE">
+        <div class="profile">
+          <h1>出演動画</h1>
+        </div>
+        <div class="recommend_MOVIE">
+          <li><iframe width="560" height="315" src="https://www.youtube.com/embed/gzn_Mk9kN50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="movie_text1">【三四郎】アイニスタ | Don't give up ~覚醒~【有吉の壁】</p></li>
+          <li><iframe width="560" height="315" src="https://www.youtube.com/embed/BYVpwteaOpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="movie_text1">【神秘】アイニスタのお悩み相談【有吉の壁】</p></li>
+        </div>
+        <div class="all_btn">
+          <p class="judge">判定お願いします！<br></p><p class="attention">※判定音が出ます※</p>
+          <div class="mute_btn_ctn"><div class="mute_btn" onclick="mute()"><p class="mute_text">ミュートにする。</p></div></div>
+          <div class="btn-box">
+            <div id="clear">
+            <button class="btn-clear2"  onclick="audio()"><p class="OK">○</p></button>
+            <audio id="btn_audio">
+              <source src="./audio/合格.mp3" type="audio/mp3">
+          </audio>
+        </div>
+        <div id="faiure">
+            <button class="btn-faiure2"  onclick="audio2()"><p class="NG">×</p></button>
+            <audio id="btn_audio2">
+              <source src="./audio/不合格.mp3" type="audio/mp3">
+          </audio>
+        </div>
+        </div>
+          <div id="judge_text_clear">
+            <p>見事～！壁、クリアです。</p>
+          </div>
+          </div>
+          <div id="judge_text_faiure">
+            <p>ざんねん～！壁、クリアならずです。</p>
+          </div>
+      </div>
+      <!-- <div class="profile_YOUTUBE">
         <div class="profile">
           <h1>出演動画</h1>
         </div>
@@ -95,7 +134,7 @@
           <div id="judge_text_faiure">
             <p>ざんねん～！壁、クリアならずです。</p>
           </div>
-      </div>
+      </div> -->
     <div class="footer05">
       <div class="wrap">
        <div class="box">
