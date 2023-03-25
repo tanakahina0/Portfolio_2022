@@ -1325,10 +1325,10 @@ table {
         max-width: 80%;
     }
     #judge_text_clear>p, #judge_text_faiure>p {
-        font-size: 4px;
+        font-size: 15px;
     }
     .judge {
-        font-size: small;
+        font-size: medium;
     }
     .btn-box {
         margin-bottom: 30px;
