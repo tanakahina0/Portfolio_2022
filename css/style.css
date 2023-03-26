@@ -844,13 +844,30 @@ table {
     }
   }
 
-
+  @media screen and (max-width: 991px) {
+    /* 991px以下に適用される（スマホ用） */
+	table th,table td{
+		display: block;
+	}
+    th {
+        margin-bottom: -30px;
+        text-decoration: underline dotted #59666e;
+        text-underline-offset: 5px;
+    }
+    td {
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    
+  }
 
 @media screen and (max-width: 599px) {
     /* 599px以下に適用される（スマホ用） */
     #page-top img {
         width: 20vw;
-        opacity: 0.9;
+        opacity: 1;
     }
     .Unrevealed {
         width: 30vw;
