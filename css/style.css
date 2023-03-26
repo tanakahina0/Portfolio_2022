@@ -860,7 +860,11 @@ table {
         text-align: center;
         
     }
-    
+    .fa-3x {
+        font-size: 2em !important;
+        margin-top: 5px;
+        margin-left: 7px;
+    }
   }
 
 @media screen and (max-width: 599px) {
